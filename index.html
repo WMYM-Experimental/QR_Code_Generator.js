@@ -10,11 +10,32 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- script file -->
     <script src="js/script.js" defer></script>
+    <!-- google icons api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="project_container">
+    <section class="project-container">
+        <div id="container">
+            <header class="header">
+                <h1 id="title">QR Code Generator</h1><br><br>
 
+                <div id="input_str">
+                    <div id="effect">
+                        <input id="input" type="text" spellcheck="false" required>
+                        <span id="line"></span>
+                        <label id="txt_input">Enter a link:</label>
+                    </div>
+                    <button id="btn">Generate QR</button>
+                </div>
+            </header>
+
+            <div class="qr-code_container">
+                <img id="qrcode" src="" alt="qrcode">
+            </div>
+        </div>
     </section>
 </body>
 

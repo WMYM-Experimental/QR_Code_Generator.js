@@ -1,5 +1,127 @@
+/* General Style */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+/* PROJECT CONTAINER */
+.project-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(#005f73, #0a9396);
+}
+#container {
+  width: 320px;
+  height: 80%;
+  background: linear-gradient(#f5f5f5, #f1f1f1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  border-radius: 2px;
+}
+/* HEADER AND TITLE */
+header {
+  padding: 10px;
+  margin: 10px;
+  height: 30%;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+#title {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+/* INPUT FOCUS EFFECT*/
+#effect {
+  position: relative;
+  margin-bottom: 45px;
+}
+#input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+#input:focus {
+  outline: none;
+}
+#txt_input {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#input:focus ~ #txt_input,
+#input:valid ~ #txt_input {
+  top: -20px;
+  font-size: 1em;
+  color: #005f73;
+}
+#line {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+#line:before,
+#line:after {
+  content: "";
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  height: 1.8px;
+  background: #005f73;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#line:before {
+  left: 50%;
+}
+#line:after {
+  right: 50%;
+}
+#input:focus ~ #line:before,
+#input:focus ~ #line:after {
+  width: 50%;
+}
+/* BUTTON */
+#btn {
+  outline: 0;
+  background: #0a9396;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 1em;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/* QR CODE */
+.qr-code_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 20px);
+  height: calc(50% - 20px);
 }
