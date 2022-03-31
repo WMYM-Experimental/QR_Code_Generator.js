@@ -18,7 +18,7 @@
 #container {
   width: 320px;
   height: 80%;
-  background: linear-gradient(#f5f5f5, #f1f1f1);
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -119,6 +119,7 @@ header {
 }
 /* QR CODE */
 .qr-code_container {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
