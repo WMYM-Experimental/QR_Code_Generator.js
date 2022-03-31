@@ -10,12 +10,13 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   align-items: center;
   background: linear-gradient(#005f73, #0a9396);
 }
 #container {
+  position: fixed;
   width: 320px;
   height: 80%;
   background: #fff;
@@ -128,4 +129,17 @@ header {
 }
 img {
   position: fixed;
+}
+/* MEDIA QUERIES */
+@media (min-height: 200px) {
+  img {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@media (min-height: 400px) {
+  img {
+    opacity: 1;
+    z-index: 1;
+  }
 }
